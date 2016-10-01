@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
+
+//let defaultRealm = try! Realm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

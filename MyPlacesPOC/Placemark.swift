@@ -9,11 +9,16 @@
 import Foundation
 import RealmSwift
 
+// Realm Model
 class Placemark: Object {
     
-// Specify properties to ignore (Realm won't persist these)
+    dynamic var id: Int = -1
+    dynamic var title: String = ""
+    dynamic var latitude: Double = 0
+    dynamic var longitude: Double = 0
     
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    // Primary Key
+    override class func primaryKey() -> String {
+        return "id"
+    }
 }

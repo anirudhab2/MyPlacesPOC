@@ -9,13 +9,30 @@
 import UIKit
 
 class CustomButton: UIButton {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    var action:(()->Void)!
+    
+    init(title: String, frame: CGRect) {
+        super.init(frame: frame)
+        
+        // Cusomizing appearance to use in edit place view
+        setTitle(title, forState: .Normal)
+        backgroundColor = UIColor.darkThemeColor()
+        setTitleColor(UIColor.whiteColor(), forState: .Normal)
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // Different colors for enabled and disabled state
+    override var enabled: Bool {
+        didSet {
+            if (enabled == true) {
+                backgroundColor = UIColor.darkThemeColor()
+            } else {
+                backgroundColor = UIColor.lightThemeColor()
+            }
+        }
+    }
 }
