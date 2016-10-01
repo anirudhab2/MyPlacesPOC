@@ -4,7 +4,7 @@
 A simple iPhone application that lets you add places on a map and save the places in a database (Realm) so they will persist across sessions. A good place to start if you want to learn about MapKit or mobile database like Realm.
 
 ## Usage
-Clone the project and run "pod init" from the project directory. This will create a Podfile in the directory. Open the Podfile and edit as
+Clone the project, open terminal and run "pod init" from the project directory. This will create a Podfile in the directory. Open the Podfile and edit as
 ```Swift
 target 'MyPlacesPOC' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
